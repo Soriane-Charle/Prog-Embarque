@@ -1,0 +1,18 @@
+Digilent Switch Module         Digilent PmodSSD		PmodHYGRO			PmodALS			PMOD8LD
+connecteur J1                  connecteur J1		connecteur J1			connecteur J1		connecteur 
+P1 -> SW1                      P1 -> segment A		P1 -> NC			P1 -> CS		P1 -> LD
+P2 -> SW2                      P2 -> segment B		P2 -> NC			P2 -> NC		P2 -> LD
+P3 -> SW3                      P3 -> segment C		P3 -> SCL			P3 -> SDO		P3 -> LD
+P4 -> SW4                      P4 -> segment D		P4 -> SDA			P4 -> SC GND		P4 -> LD
+GND -> GND                     P5 -> GND		P5 -> GND			P5 -> GND		P5 -> GND
+Vcc -> Vcc                     P6 -> Vcc		P6 -> VCC			P6 -> VCC		P6 -> VCC
+                               connecteur J2		connecteur J2						P7 -> LD
+                               P1 -> segment E		P1 -> NC						P8 -> LD
+                               P2 -> segment F		P2 -> NC						P9 -> LD
+                               P3 -> segment G		P3 -> SCL						P10 -> LD
+                               P4 -> c			P4 -> SDA						P11 -> GND
+                               P5 -> GND		P5 -> GND						P12 -> VCC
+                               P6 -> Vcc		P6 -> VCC
+							connecteur Jumper Blocks 
+							P1 -> JP1
+							P2 -> JP2

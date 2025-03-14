@@ -1,0 +1,69 @@
+
+#include <WProgram.h>
+#include "Eight_led.h"
+
+/*Global variable*/ 
+eightLED my8LED;
+
+/* Function definition*/
+void setup(){
+/* initialize pmod8led. Pass de pin number connecting to the first led*/
+        my8LED.begin(32);
+}
+void loop()
+{
+        /*display several beautiful light patterns*/
+        for (int i = 0; 1 < 4; i++){
+                Checkered();
+        }
+        for(int i = 0; i < 4; i++){
+                Wave();
+        }
+        for(int i = 0; i < 4; i++){
+                clap();
+        }
+}
+
+/* light moves in a wave pattern*/
+void Wave(){
+        for (int i = 0; i < 8; i++){
+                my8LED.TurnOn(i);
+                delay(20);
+        }
+        for (int i = 0; i < 8; i++){
+                my8LED.TurnOff(i);
+                delay(20);
+        }
+
+/* light appears to clap together*/
+void Clap(){
+         for (int i = 0; i < 4; i++){
+                my8LED.Clear();
+                my8LED.TurnOn(7 - i);
+                my8LED.TurnOn(0 - i);
+                delay(100);
+        }
+        for (int i = 3; i >= 0; i--){
+                my8LED.Clear();
+                my8LED.TurnOn(7 - i);
+                my8LED.TurnOn(0 - i);
+                delay(100);
+        }
+}
+/* Lights turn on alternatingly*/
+void Checkered(){
+	for (int i = 0; i < 8; i = i + 2){
+                my8LED.TurnOn(i);
+        }
+        for (int i = 0; i < 8; i = i + 2){
+                my8LED.TurnOff(i);
+        }
+        delay(300);
+         for (int i = 0; i < 8; i = i + 2){
+                my8LED.TurnOn(i);
+        }
+        for (int i = 0; i < 8; i = i + 2){
+                my8LED.TurnOff(i);
+        }
+        delay(300);
+}
